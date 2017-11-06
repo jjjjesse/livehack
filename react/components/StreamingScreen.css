@@ -1,7 +1,13 @@
 .stream-box {
-  padding: 25%;
-  width: 20%;
-  height: 20%;
-  background-color: black;
-  border: 5px;
+  width: 640px;
+  height: 480px;
+  margin-left: 20px;
+  margin-right: 60px;
+  background-color: #4d4e4f;
+  text-align: center;
+  color: white;
+  border: 20px;
+  border-color: #a3e0a7;
+  border-style: solid;
+  border-radius: 10px;
 }

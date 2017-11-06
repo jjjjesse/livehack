@@ -4,7 +4,7 @@ import './StreamingScreen.css'
 const StreamingScreen = () => {
   return (
    <div>
-      <h1 className='stream-box'>Test</h1>
+      <p className='stream-box'>Streaming Screen</p>
     </div>
   )
 }
