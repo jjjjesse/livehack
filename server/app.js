@@ -45,6 +45,11 @@ var broadcastToChannel = function(guid, channel, currentWs, data) {
       continue;
 
     let socket = users[key].socket;
+
+    //Don't broadcast to self.
+    if ( socket === currentWs )
+      continue;
+    
     try {
       socket.send(data);
     } catch (e) {
