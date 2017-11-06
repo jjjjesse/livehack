@@ -1,14 +1,13 @@
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
+import * as ReactBootstrap from 'react-bootstrap'
+
 
 
 const Main = () => {
   return (
-    <grid>
-      <row className="show-grid">
-        <col sm={6} md={9}></col>
-        <col sm={6} md={3}></col>
-      </row>
-    </grid>
+    TEST
 
   )
 }

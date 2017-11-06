@@ -6,5 +6,5 @@ import 'bootstrap/dist/css/bootstrap-theme.css';
 import * as ReactBootstrap from 'react-bootstrap'
 
 
-ReactDOM.render(<StreamingScreen />, document.getElementById('app'))
-// ReactDOM.render(<Main />, document.getElementById('app'))
+// ReactDOM.render(<StreamingScreen />, document.getElementById('app'))
+ ReactDOM.render(<StreamingScreen />, document.getElementById('app'))
