@@ -3,8 +3,8 @@ import './StreamingScreen.css'
 
 const StreamingScreen = () => {
   return (
-    <div className='stream-box'>
-    <h1 class='stream-box'>Test</h1>
+   <div>
+      <h1 className='stream-box'>Test</h1>
     </div>
   )
 }
