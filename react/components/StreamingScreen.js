@@ -2,10 +2,9 @@ import React from 'react'
 
 const StreamingScreen = () => {
   return (
-   <div className='hello-world'>
-      <h1>Hello World</h1>
-      <p>Welcome to my world</p>
-    </div>
+    <div class="panel panel-default">
+   <div class="panel-body">A Basic Panel</div>
+ </div>
   )
 }
 
