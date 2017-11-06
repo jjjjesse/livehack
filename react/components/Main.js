@@ -1,6 +1,6 @@
 import React from 'react'
-import LeftColumn from './components/LeftColumn'
-import RightColumn from './components/RightColumn'
+import LeftColumn from './LeftColumn'
+import RightColumn from './RightColumn'
 
 const Main = () => {
   return (
@@ -15,3 +15,5 @@ const Main = () => {
 }
 
 export default Main
+
+export {LeftColumn, RightColumn}

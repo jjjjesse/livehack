@@ -1,7 +1,7 @@
 import React from 'react'
-import ChatSection from './components/ChatSection'
-import TextInput from './components/TextInput'
-import SwitchButton from './components/SwitchButton'
+import ChatSection from './ChatSection'
+import TextInput from './TextInput'
+import SwitchButton from './SwitchButton'
 
 const RightColumn = () => {
   return (

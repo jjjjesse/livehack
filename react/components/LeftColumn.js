@@ -1,6 +1,6 @@
 import React from 'react'
-import StreamingScreen from './components/StreamingScreen'
-import QuestionSection from './components/QuestionSection'
+import StreamingScreen from './StreamingScreen'
+import QuestionSection from './QuestionSection'
 
 const LeftColumn = () => {
   return (
