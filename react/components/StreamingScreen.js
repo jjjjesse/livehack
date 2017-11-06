@@ -1,5 +1,5 @@
 import React from 'react'
-import './StreamingScreen.js'
+import './StreamingScreen.css'
 
 const StreamingScreen = () => {
   return (
