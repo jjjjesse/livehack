@@ -4,12 +4,12 @@ import RightColumn from './RightColumn'
 
 const Main = () => {
   return (
-    <Grid>
-      <Row className="show-grid">
-        <Col sm={6} md={9}>{LeftColumn}</Col>
-        <Col sm={6} md={3}>{RightColumn}</Col>
-      </Row>
-    </Grid>
+    <grid>
+      <row className="show-grid">
+        <col sm={6} md={9}>{LeftColumn}<col>
+        <col sm={6} md={3}>{RightColumn}<col>
+      </row>
+    </grid>
 
   )
 }

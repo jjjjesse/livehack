@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ChatSectioni = () => {
+const ChatSection = () => {
   return (
    <div className='hello-world'>
       <h1>Hello World</h1>
