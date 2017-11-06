@@ -54,13 +54,6 @@ var broadcastToChannel = function(guid, channel, currentWs, data) {
     }
   }
 
-/**
-  wss.clients.forEach(function each(client) {
-    if (client !== currentWs && client.readyState === WebSocket.OPEN) {
-      client.send(data);
-    }
-  });**/
-
   users[guid].socket.send(JSON.stringify({
     'type': 'ack',
     'name': 'system',
