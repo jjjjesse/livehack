@@ -1,6 +1,6 @@
 import React from 'react'
 
-const QuestionSection = () => {
+const Main = () => {
   return (
     <div className='hello-world'>
       <h1>Hello World</h1>
@@ -9,4 +9,4 @@ const QuestionSection = () => {
   )
 }
 
-export default QuestionSection
+export default Main

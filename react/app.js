@@ -5,4 +5,6 @@ import ChatSection from './components/ChatSection'
 import QuestionSection from './components/QuestionSection'
 import TextInput from './components/TextInput'
 import SwitchButton from './components/SwitchButton'
-ReactDOM.render(<ChatSection />, document.getElementById('app'))
+import Main from './components/Main'
+
+ReactDOM.render(<Main />, document.getElementById('app'))
