@@ -1,12 +1,13 @@
 import React from 'react'
+import './StreamingScreen.js'
 
 const StreamingScreen = () => {
   return (
-    <div className='hello-world'>
-      <h1>Hello World</h1>
-      <p>Welcome to my world</p>
+    <div className='stream-box'>
+    <h1>Test</h1>
     </div>
   )
 }
+
 
 export default StreamingScreen
