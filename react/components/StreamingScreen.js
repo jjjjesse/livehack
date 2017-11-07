@@ -1,6 +1,5 @@
 import React from 'react'
 import './StreamingScreen.css'
-
 import * as ReactBootstrap from 'react-bootstrap'
 
 const StreamingScreen = () => {
