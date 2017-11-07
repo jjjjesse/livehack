@@ -4,6 +4,6 @@
   background-color: #898989;
   border-color: white;
   border-style: solid;
-  border-radius: 10px;
+  border-radius: 0px 10px 10px 0px;
   border: 20px;
 }

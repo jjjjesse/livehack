@@ -15,21 +15,14 @@ function Wrapper(props) {
         <Row>
 
           {props.stream}
-
         </Row>
         <Row>
-
           {props.questions}
-
         </Row>
       </Col>
       <Col sm={3}>
 
-
             {props.chat}
-
-
-
             {props.input}
             {props.login}
      </Col>
