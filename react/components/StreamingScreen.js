@@ -8,7 +8,7 @@ const StreamingScreen = () => {
      <ReactBootstrap.Tooltip placement="top" className="in" id="tooltip-top">
       Tooltip top
     </ReactBootstrap.Tooltip>
-      <p className='stream-box'>Streaming Screen</p>
+      <div className='stream-box'>Streaming Screen</div>
     </div>
   )
 }

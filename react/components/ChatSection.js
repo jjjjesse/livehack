@@ -1,10 +1,12 @@
 import React from 'react'
+import * as ReactBootstrap from 'react-bootstrap'
 
 const ChatSection = () => {
   return (
-   <div className='hello-world'>
-      <h1>Hello World</h1>
-      <p>Welcome to my world</p>
+    <div class="container-fluid">
+   <ReactBootstrap.Panel header={ChatSection} bsStyle="primary">
+      chat
+    </ReactBootstrap.Panel>
     </div>
   )
 }

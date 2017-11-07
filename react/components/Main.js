@@ -8,24 +8,28 @@ import TextInput from './TextInput'
 
 function Wrapper(props) {
   return (
+   
       <div className="container-fluid">
-        <div className="row">
-          <div className="col-sm-8">
+      <ReactBootstrap.Grid>
+        <ReactBootstrap.Row>
+          <ReactBootstrap.Col>
           {props.stream}
-          </div>
-          <div classname="col-sm-4">
+          </ReactBootstrap.Col>
+          <ReactBootstrap.Col>
             {props.chat}
-          </div>
-        </div>
-        <div classname="row">
-          <div className="col">
+          </ReactBootstrap.Col>
+        </ReactBootstrap.Row>
+        <ReactBootstrap.Row>
+          <ReactBootstrap.Col>
           {props.questions}
-          </div>
-          <div className="col">
+          </ReactBootstrap.Col>
+          <ReactBootstrap.Col>
             {props.input}
-          </div>
-        </div>
+          </ReactBootstrap.Col>
+        </ReactBootstrap.Row>
+        </ReactBootstrap.Grid>
       </div>
+      
     );
   }
 
