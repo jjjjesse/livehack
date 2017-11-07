@@ -5,18 +5,18 @@ import StreamingScreen from './StreamingScreen'
 
 function Wrapper(props) {
   return (
-      <div className="wrapper">
-        <div className="leftcolumn">
-          <div className="streamingscreen">
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-sm-8">
           {props.stream}
           </div>
-          <div classname="questionsection">
-      
+          <div classname="col-sm-4">
+        test
           </div>
         </div>
-        <div classname="rightcolumn">
-          <div className="chatsection">
-        
+        <div classname="row">
+          <div className="col">
+        test
           </div>
         </div>
       </div>

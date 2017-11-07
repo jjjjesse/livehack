@@ -4,7 +4,7 @@ import * as ReactBootstrap from 'react-bootstrap'
 
 const StreamingScreen = () => {
   return (
-   <div className="container">
+   <div className="">
      <ReactBootstrap.Tooltip placement="top" className="in" id="tooltip-top">
       Tooltip top
     </ReactBootstrap.Tooltip>
