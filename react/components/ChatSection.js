@@ -1,11 +1,12 @@
 import React from 'react'
 import * as ReactBootstrap from 'react-bootstrap'
+import './ChatSection.css'
 
 const ChatSection = () => {
   return (
-    <div class="container-fluid">
+    <div className="container-fluid chat-section">
    <ReactBootstrap.Panel header={ChatSection} bsStyle="primary">
-      chat
+      Chat section
     </ReactBootstrap.Panel>
     </div>
   )

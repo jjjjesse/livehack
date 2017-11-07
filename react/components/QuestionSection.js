@@ -1,9 +1,10 @@
 import React from 'react'
+import './QuestionSection.css'
 
 const QuestionSection = () => {
   return (
    <div className='question-section'>
-      <h1>QuestionSection</h1>
+      <p>Question Section</p>
     </div>
   )
 }
