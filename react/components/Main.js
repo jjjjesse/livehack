@@ -14,7 +14,7 @@ function Wrapper(props) {
           {props.stream}
           </div>
           <div classname="col-sm-4">
-          {props.chat}
+            {props.chat}
           </div>
         </div>
         <div classname="row">
@@ -22,8 +22,8 @@ function Wrapper(props) {
           {props.questions}
           </div>
           <div className="col">
-          {props.input}
-          </div
+            {props.input}
+          </div>
         </div>
       </div>
     );
@@ -36,7 +36,7 @@ var Main = React.createClass({
       <Wrapper stream={<StreamingScreen />} 
                chat={<ChatSection />} 
                questions={<QuestionSection />}
-               input={<TextInput/>}
+               input={<TextInput />} />
 
         );
   }
