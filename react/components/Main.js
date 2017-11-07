@@ -1,5 +1,5 @@
 import React from 'react'
-import * as ReactBootstrap from 'react-bootstrap'
+import { Grid, Row, Col } from 'react-bootstrap'
 import StreamingScreen from './StreamingScreen'
 import ChatSection from './ChatSection'
 import QuestionSection from './QuestionSection'
@@ -10,24 +10,24 @@ function Wrapper(props) {
   return (
    
       <div className="container-fluid">
-      <ReactBootstrap.Grid fluid={true}>
-        <ReactBootstrap.Row>
-          <ReactBootstrap.Col xs={10} md={8}>
+      <Grid fluid={true}>
+        <Row>
+          <Col xs={10} md={8}>
           {props.stream}
-          </ReactBootstrap.Col>
-          <ReactBootstrap.Col xs={2} md={4}>
+          </Col>
+          <Col xs={2} md={4}>
             {props.chat}
-          </ReactBootstrap.Col>
-        </ReactBootstrap.Row>
-        <ReactBootstrap.Row>
-          <ReactBootstrap.Col xs={10} md={8}>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={10} md={8}>
           {props.questions}
-          </ReactBootstrap.Col>
-          <ReactBootstrap. Col xs={2} md={4}>
+          </Col>
+          < Col xs={2} md={4}>
             {props.input}
-          </ReactBootstrap.Col>
-        </ReactBootstrap.Row>
-        </ReactBootstrap.Grid>
+          </Col>
+        </Row>
+        </Grid>
       </div>
       
     );

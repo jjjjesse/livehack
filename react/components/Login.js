@@ -1,5 +1,5 @@
 import React from 'react'
-import * as ReactBootstrap from 'react-bootstrap'
+import  { Modal, Button } from 'react-bootstrap'
 
 const Login = React.createClass({
   getInitialState() {
@@ -18,25 +18,25 @@ const Login = React.createClass({
     return (
       <div>
 
-        <ReactBootstrap.Button
+        <Button
           bsStyle="primary"
           bsSize="large"
           onClick={this.open}
         >
           Login
-        </ReactBootstrap.Button>
+        </Button>
 
-        <ReactBootstrap.Modal show={this.state.showModal} onHide={this.close}>
-          <ReactBootstrap.Modal.Header closeButton>
-            <ReactBootstrap.Modal.Title>Login</ReactBootstrap.Modal.Title>
-          </ReactBootstrap.Modal.Header>
-          <ReactBootstrap.Modal.Body>
+        <Modal show={this.state.showModal} onHide={this.close}>
+          <Modal.Header closeButton>
+            <Modal.Title>Login</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
             <h4>Choose Username</h4>
-             </ReactBootstrap.Modal.Body>
-          <ReactBootstrap.Modal.Footer>
-            <ReactBootstrap.Button onClick={this.close}>Close</ReactBootstrap.Button>
-          </ReactBootstrap.Modal.Footer>
-        </ReactBootstrap.Modal>
+             </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={this.close}>Close</Button>
+          </Modal.Footer>
+        </Modal>
       </div>
     );
   },
