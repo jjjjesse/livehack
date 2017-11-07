@@ -9,7 +9,7 @@
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
-
+  <link href="css/hackSite.css" rel="stylesheet">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -18,11 +18,10 @@
       <![endif]-->
     </head>
     <body>
+
       <h1>Livehack</h1>
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src="js/bootstrap.min.js"></script>
+
 
       <div id="stream">
       </div>
@@ -44,6 +43,27 @@
               <!-- /input-group -->
             </div><!-- /.col-lg-6 -->
           </div><!-- /.row -->
+        </div>
+      </div>
 
+          <div id="layoutContainer">
+
+            <div class="col-lg-8">
+              <div class="row panelSize" id="blue">
+                <h1>One panel</h1>
+              </div>
+              <div class="row panelSize" id="red">
+                <h1>Two panel</h1>
+            </div>
+          </div>
+            <div class="col-lg-4">
+              <div class="panelSide" id="green">
+              <h1>Three panel</h>
+            </div>
+          </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
       </body>
       </html>

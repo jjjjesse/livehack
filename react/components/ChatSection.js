@@ -5,11 +5,13 @@ import './ChatSection.css'
 
 const Chat = (props) => {
   return (
-    <div className="container-fluid chat-section">
-    {props.login}
-   <Panel header={ChatSection} bsStyle="primary">
+    <div className="chat-section">
+
+   <Panel heading={ChatSection} bsStyle="primary">
       Chat section
     </Panel>
+
+
     </div>
   )
 }
@@ -23,5 +25,5 @@ var ChatSection = React.createClass({
 
 })
 
- 
+
 export default ChatSection
