@@ -11,22 +11,17 @@ function Wrapper(props) {
    
       <div className="container-fluid">
       <Grid fluid={true}>
-        <Row>
+        
           <Col xs={10} md={8}>
           {props.stream}
-          </Col>
-          <Col xs={2} md={4}>
-            {props.chat}
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={10} md={8}>
           {props.questions}
           </Col>
-          < Col xs={2} md={4}>
-            {props.input}
+        
+          <Col xs={2} md={4}>
+          {props.chat}
+          {props.input}
           </Col>
-        </Row>
+        
         </Grid>
       </div>
       
