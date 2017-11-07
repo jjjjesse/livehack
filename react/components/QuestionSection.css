@@ -1,11 +1,9 @@
 .question-section {
   margin: 5px 0px 0px 0px;
   height: 20vh;
-  width: 100%;
   background-color: #e5e2b0;
   border-color: #e5e2b0;
   border-style: solid;
-  border-radius: 10px 0px 0px 10px;
   color: black;
   text-align: center;
 }

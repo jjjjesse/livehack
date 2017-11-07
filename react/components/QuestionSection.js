@@ -1,11 +1,12 @@
 import React from 'react'
+import { Panel } from 'react-bootstrap'
 import './QuestionSection.css'
 
 const QuestionSection = () => {
   return (
-   <div className='question-section'>
+   <Panel className='question-section'>
       <p>Question Section</p>
-    </div>
+    </Panel>
   )
 }
 

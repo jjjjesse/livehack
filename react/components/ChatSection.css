@@ -1,9 +1,9 @@
 .chat-section {
   margin: 5px 0px 5px 0px;
   height: 78vh;
-  background-color: #898989;
-  border-color: white;
+  width:100%;
+  border-color: #000040;
   border-style: solid;
-  border-radius: 0px 10px 10px 0px;
-  border: 20px;
+  border-width: 1;
+
 }

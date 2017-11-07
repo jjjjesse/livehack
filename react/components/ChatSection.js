@@ -5,14 +5,14 @@ import './ChatSection.css'
 
 const Chat = (props) => {
   return (
-    <div className="chat-section">
-
-   <Panel heading={ChatSection} bsStyle="primary">
-      Chat section
-    </Panel>
 
 
-    </div>
+  <div>
+      <Panel className='chat-section' bsStyle="primary">
+        <p>  Chat section </p>
+      </Panel>
+  </div>
+
   )
 }
 

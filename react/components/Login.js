@@ -21,7 +21,7 @@ const Login = React.createClass({
 
         <Button
           bsStyle="primary"
-          bsSize="large"
+      
           className="buttonSize"
           onClick={this.open}
         >
