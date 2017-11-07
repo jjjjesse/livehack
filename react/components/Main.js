@@ -10,20 +10,20 @@ function Wrapper(props) {
   return (
    
       <div className="container-fluid">
-      <ReactBootstrap.Grid>
+      <ReactBootstrap.Grid fluid={true}>
         <ReactBootstrap.Row>
-          <ReactBootstrap.Col>
+          <ReactBootstrap.Col xs={10} md={8}>
           {props.stream}
           </ReactBootstrap.Col>
-          <ReactBootstrap.Col>
+          <ReactBootstrap.Col xs={2} md={4}>
             {props.chat}
           </ReactBootstrap.Col>
         </ReactBootstrap.Row>
         <ReactBootstrap.Row>
-          <ReactBootstrap.Col>
+          <ReactBootstrap.Col xs={10} md={8}>
           {props.questions}
           </ReactBootstrap.Col>
-          <ReactBootstrap.Col>
+          <ReactBootstrap. Col xs={2} md={4}>
             {props.input}
           </ReactBootstrap.Col>
         </ReactBootstrap.Row>
