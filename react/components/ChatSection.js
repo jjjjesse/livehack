@@ -23,5 +23,5 @@ var ChatSection = React.createClass({
 
 })
 
-
+ 
 export default ChatSection
