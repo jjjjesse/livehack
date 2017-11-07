@@ -3,11 +3,11 @@ import * as ReactBootstrap from 'react-bootstrap'
 
 const TextInput = () => {
   return (
-      <form>
-        <ReactBootstrap.FormGroup controlId="formBasicText" >
+      <ReactBootstrap.Form>
+        <ReactBootstrap.FormGroup controlId="chatfield" >
           <ReactBootstrap.FormControl type="text" placeholder="Enter text"/>
         </ReactBootstrap.FormGroup>
-      </form> )}
+      </ReactBootstrap.Form> )}
 
 
 export default TextInput
