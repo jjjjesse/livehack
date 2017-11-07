@@ -1,6 +1,9 @@
 import React from 'react'
 import * as ReactBootstrap from 'react-bootstrap'
 import StreamingScreen from './StreamingScreen'
+import ChatSection from './ChatSection'
+import QuestionSection from './QuestionSection'
+import TextInput from './TextInput'
 
 
 function Wrapper(props) {
@@ -11,13 +14,16 @@ function Wrapper(props) {
           {props.stream}
           </div>
           <div classname="col-sm-4">
-        test
+          {props.chat}
           </div>
         </div>
         <div classname="row">
           <div className="col">
-        test
+          {props.questions}
           </div>
+          <div className="col">
+          {props.input}
+          </div
         </div>
       </div>
     );
@@ -27,7 +33,10 @@ function Wrapper(props) {
 var Main = React.createClass({
   render: function(){
     return(
-      <Wrapper stream={<StreamingScreen />} />
+      <Wrapper stream={<StreamingScreen />} 
+               chat={<ChatSection />} 
+               questions={<QuestionSection />}
+               input={<TextInput/>}
 
         );
   }
