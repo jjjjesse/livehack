@@ -1,0 +1,9 @@
+.chat-section {
+  margin: 5px 0px 5px 0px;
+  height: 70vh;
+  background-color: #898989;
+  border-color: white;
+  border-style: solid;
+  border-radius: 10px;
+  border: 20px;
+}
