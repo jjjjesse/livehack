@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Row, Col, Button } from 'react-bootstrap'
+import { Grid, Row, Col, Button, Glyphicon } from 'react-bootstrap'
 import StreamingScreen from './StreamingScreen'
 import ChatSection from './ChatSection'
 import QuestionSection from './QuestionSection'
@@ -44,9 +44,10 @@ class Main extends React.Component {
     return(
 
     <div className="container-fluid">
+     <Button onClick={() => this.setState({ showing: !showing })}><Glyphicon glyph="chevron-left" /></Button>
+          
       <Grid fluid={true}>
-       <Button onClick={() => this.setState({ showing: !showing })}>toggle</Button>
-                { showing 
+            { showing 
       ? <LeftColumn stream={<StreamingScreen />}
                questions={<QuestionSection />} />
       : null 
