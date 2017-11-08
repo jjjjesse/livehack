@@ -24,7 +24,7 @@ function LeftColumn(props) {
 
 function RightColumn(props) {
   return (
-  <Col sm={3}>
+  <Col sm={props.size}>
 
             {props.chat}
             {props.input}
@@ -53,7 +53,8 @@ class Main extends React.Component {
     }
       <RightColumn input={<TextInput />}
                login = {<Login/>}
-               chat={<ChatSection />} />
+               chat={<ChatSection />}
+               size={ showing ? 3 : 12 } />
 
 
         </Grid>
