@@ -3,12 +3,17 @@ class WS_Client {
 	constructor(serverUri) {
 		this.serverUri = serverUri;
 		this.socket = false;
-		this._setupSocket();
 		this.emitter = {};
+		this.username = false;
 	}
 
-	_setupSocket() {
-		this.socket = new WebSocket(this.serverUri);
+	connectToChannel(channel) {
+		var uri = `${this.serverUri}/${channel}`;
+		this._setupSocket(uri);
+	}
+
+	_setupSocket(uri) {
+		this.socket = new WebSocket(uri);
 
 		this.socket.onopen = () => {
 			this.onSocketOpen();
@@ -25,6 +30,7 @@ class WS_Client {
 
 	onSocketOpen() {
 		console.log('Socket connection established');
+		this.emit('connected');
 	}
 
 	onSocketError(error) {
@@ -34,23 +40,27 @@ class WS_Client {
 	onSocketMessage(message) {
 
 		try {
-			var jsData = JSON.parse(message);
+			var jsData = JSON.parse(message.data);
 		} catch (e) {
 			console.error(`Data error: Non-JSON response received`);
 			return;
 		}
 
-		this.routeMessage(message);
+		this.routeMessage(jsData);
 
 	}
 
 	routeMessage(message) {
+		if (! message.hasOwnProperty('type') ) {
+			console.error('Missing type property in JSON data.');
+			return false;
+		}
 
-		//If message type is chat...
-		//this.emit('message')
-
-		//Else something else?
-		//this.emit('error')
+		switch (message.type) {
+			case 'broadcast':
+				this.emit('broadcast', message);
+			break;
+		}
 
 	}
 
@@ -64,7 +74,7 @@ class WS_Client {
 	}
 
 	emit(identifier, args = {}) {
-		if (! this.emitter.hasOwnProperty[identifier] )
+		if (! this.emitter.hasOwnProperty(identifier) )
 			return;
 
 		for ( var i=0; i<this.emitter[identifier].length; i++ ) {
@@ -72,7 +82,24 @@ class WS_Client {
 		}
 	}
 
+	registerUsername(username) {
+		this.username = username;
+		this.socket.send(JSON.stringify({
+	  	'type': 'register',
+	    'name': username,
+	    'message': ''
+	  }));
+	}
+
+	sendMessage(message) {
+		
+		this.socket.send(JSON.stringify({
+	  	'type': 'broadcast',
+	    'name': this.username,
+	    'message': message
+	  }));
+	}
 
 }
 
-export { WS_Client }
+//export { WS_Client }

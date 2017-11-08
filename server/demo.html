@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Test</title>
+	<style>
+		* {
+			box-sizing: border-box;	
+		}
+		body {
+			margin: 0;
+			font-family: monospace;
+			font-size: 13px;
+		}
+		body, html {
+			height: 100%;
+		}
+		#messages {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			padding: 1em;
+			background: #f4f4f4;
+		}
+		
+		.msg span {
+			color: #999;
+			font-style: italic;
+		}
+		.time {
+			font-size: 11px;
+			color: #999;
+			margin-bottom: 5px;
+		}
+		#inpt {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 30px;
+			line-height: 30px;
+			border: 1px solid #aaa;
+			font-family: monospace;
+			font-size: 13px;
+			padding: 0 8px;
+			z-index: 2;
+		}
+	</style>
+</head>
+<body>
+	<div id="messages">
+	</div>
+	<input type="text" id="inpt" placeholder="Enter your message..." />
+
+	<script src="websocket-client.js"></script>
+	<script>
+		var username = prompt('Enter a username');
+		var channel = prompt('Enter a channel');
+		var msgDom = document.getElementById('messages');
+		var inptDom = document.getElementById('inpt');
+
+		//Connect to the websocket server.
+		var connection = new WS_Client('ws://localhost:8080');
+
+		connection.on('connected', (args) => {
+			//Once the connection is established, register username.
+			connection.registerUsername(username);
+		});
+
+		//When a broadcast message is received.
+		connection.on('broadcast', (args) => {
+			var name = args.name;
+			var msg = args.message;
+			var time = new Date();
+
+			var html = `<div class="msg">${name}: ${msg}</div><div class="time">${time}</div>`;
+			msgDom.innerHTML = msgDom.innerHTML + html;
+
+		});
+		connection.connectToChannel('hacks');
+
+		/**
+		 * Vanilla DOM hooks for demo purposes
+		 */
+		inptDom.addEventListener('keypress', function(e){
+			if ( e.which === 13 ) { //Enter key
+				if ( this.value ) {
+					var msg = this.value;
+					connection.sendMessage(msg);
+					this.value = "";
+
+					var time = new Date();
+					var html = `<div class="msg">${username}: ${msg}</div><div class="time">${time}</div>`;
+					msgDom.innerHTML = msgDom.innerHTML + html;
+
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 //Broadcast to channel
 //everyone but self.
 var broadcastToChannel = function(guid, channel, currentWs, data) {
-
+  console.log(`Broadcast: ${data}`);
   if (! users.hasOwnProperty(guid) ) {
     console.log('User guid is not registered.');
     return false;
