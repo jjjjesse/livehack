@@ -9,7 +9,7 @@ import Login from './Login'
 function Wrapper(props) {
   return (
 
-      <div className="container">
+      <div className="container-fluid">
       <Grid fluid={true}>
       <Col sm={9}>
         <Row>
