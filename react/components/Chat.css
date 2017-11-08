@@ -1,0 +1,43 @@
+* {
+      box-sizing: border-box; 
+    }
+    body {
+      margin: 0;
+      font-family: monospace;
+      font-size: 13px;
+    }
+    body, html {
+      height: 100%;
+    }
+    #messages {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding: 1em;
+      background: #f4f4f4;
+    }
+    
+    .msg span {
+      color: #999;
+      font-style: italic;
+    }
+    .time {
+      font-size: 11px;
+      color: #999;
+      margin-bottom: 5px;
+    }
+    #inpt {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      border: 1px solid #aaa;
+      font-family: monospace;
+      font-size: 13px;
+      padding: 0 8px;
+      z-index: 2;
+    }

@@ -1,10 +1,13 @@
 import React from 'react'
-import  { Modal, Button } from 'react-bootstrap'
+import  { Modal, Button, Form, FormGroup, FormControl, ControlLabel } from 'react-bootstrap'
 import './Login.css'
 
 const Login = React.createClass({
   getInitialState() {
-    return { showModal: false };
+    return { 
+      showModal: false, 
+      value: '',
+    };
   },
 
   close() {
@@ -13,6 +16,10 @@ const Login = React.createClass({
 
   open() {
     this.setState({ showModal: true });
+  },
+
+  handleChange(e) {
+    this.setState({ value: e.target.value });
   },
 
   render() {
@@ -33,8 +40,20 @@ const Login = React.createClass({
             <Modal.Title>Login</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h4>Choose Username</h4>
-             </Modal.Body>
+            <Form>
+        <FormGroup
+          controlId="formBasicText" >
+          <ControlLabel>Choose Username</ControlLabel>
+          <FormControl
+            type="text"
+            value={this.state.value}
+            placeholder="Enter text"
+            onChange={this.handleChange}
+          />
+              <FormControl.Feedback />
+            </FormGroup>
+          </Form>
+          </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.close}>Close</Button>
           </Modal.Footer>
