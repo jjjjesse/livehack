@@ -1,5 +1,6 @@
 import React from 'react'
 import  { Modal, Button } from 'react-bootstrap'
+import './Login.css'
 
 const Login = React.createClass({
   getInitialState() {
@@ -20,7 +21,8 @@ const Login = React.createClass({
 
         <Button
           bsStyle="primary"
-          bsSize="large"
+      
+          className="buttonSize"
           onClick={this.open}
         >
           Login
